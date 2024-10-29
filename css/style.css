@@ -1,20 +1,55 @@
-/*Juvenil*/
-/*
 :root {
   --color-primario: #f8d637;
   --color-secundario: #e6df6e; 
   --color-bars: #001c9e; 
-  --color-pedro: #604fd0;
+  --color-productos: #604fd0;
   --color-general:#dea1ff; 
-}*/
+  --color-letra:#000000; 
+}
+/*Juvenil*/
+
+.juvenil {
+  --color-primario: #f8d637;
+  --color-secundario: #e6df6e; 
+  --color-bars: #001c9e; 
+  --color-productos: #604fd0;
+  --color-general:#dea1ff; 
+  --color-letra:#000000;
+}
 
 /*seriedad y confiabilidad*/
-:root {
-  --color-primario: #120907;
+.seriedad {
+  --color-primario: #2d2d2d;
   --color-secundario: #252541;
   --color-bars: #605f94;
-  --color-pedro: #a5a2ea;
+  --color-productos: #a5a2ea;
   --color-general:#ebdfed;
+  --color-letra:aliceblue;
+}
+.dinamismo{ /**/
+  --color-primario: #ff6808;
+  --color-secundario:#ffa908;
+  --color-bars:#ffe007;
+  --color-productos: #fffb55;
+  --color-general:#600e0e;
+  --color-letra:#000000;
+}
+
+.tranquilidad{/**/
+  --color-primario:  #b1783f;
+  --color-secundario:  #cedc61;
+  --color-bars: #81bf33;
+  --color-productos: #5de38b;
+  --color-general:#197561;
+  --color-letra:#000000;
+}
+.extra{
+  --color-primario: #0092ff;
+  --color-secundario: #ff3fde;
+  --color-bars: #ffa670;
+  --color-productos: #ffff8f;
+  --color-general:#b0ffff;
+  --color-letra:#000000;
 }
 
 * {
@@ -42,6 +77,7 @@ body {
     "main"
     "foot";
 }
+
 
 header {
   /*Cabecera, separa los 3 objetos del header entre ellos **/
@@ -151,6 +187,7 @@ section > h1 {
   font-family: "Teko", sans-serif;
   font-size: 1.3rem;
   font-weight: bold;
+  color: var(--color-secundario);
 }
 
 article {
@@ -163,7 +200,7 @@ article {
   align-items: center;
   border: 0;
   margin: 1rem;
-  background-color: var(--color-pedro);
+  background-color: var(--color-productos);
   color: var(--color-primario);
 }
 article > span {
@@ -173,6 +210,26 @@ article > span {
   font-family: "Courier New", Courier, monospace;
   font-size: 1.1rem;
   font-weight: bold;
+}
+
+.juvBut {
+  background-color: #0092ff;
+  color: var(--color-general);
+}
+.serBut {
+  background-color: #120907;
+  color: var(--color-general);
+}
+.dinBut {
+  background-color: #ff6808;
+  color: var(--color-general);
+}
+.tranBut {
+  background-color:  #b1783f;
+  color: var(--color-general);}
+.exBut {
+  background-color: #0092ff;
+  color: var(--color-general);
 }
 
 footer {
@@ -188,7 +245,7 @@ footer {
 footer {
   font-family: "Open Sans", sans-serif;
   background-color: var(--color-secundario);
-  color: var(--color-primario);
+  color: var(--color-productos);
 }
 
 aside span {
@@ -232,13 +289,36 @@ a {
   text-decoration: none;
   font-size: 1rem;
   justify-content: center;
-  color: aliceblue;
+  color: var(--color-letra);
 }
 
 .copy svg {
   width: 2rem;
   height: 2rem;
 }
+
+section > button {
+  margin: 1rem;
+  border: 1px;
+  border-radius: 12px;
+}
+
+body {
+
+  background-color: white;
+  color: black;
+  } 
+  
+  /* Estilos para el modo oscuro (dark mode) */
+  
+  @media (prefers-color-scheme: dark) {
+  
+  body {
+  background-color: black;
+  color: white;
+  }   
+  }
+
 
 /* Tablets y phablets  2 */
 @media screen and (min-width: 576px) {
